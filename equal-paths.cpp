@@ -13,7 +13,7 @@ using namespace std;
         // base case: empty tree (root == NULL)
         if (node == nullptr) { return 0;}
 
-        // if it's a leaf node, return depth
+        // if it's a leaf node -> return depth
         if (node->left == nullptr && node->right == nullptr) { return 1;}
 
         // // recursive step: recursively find the depth of left and right subtrees
@@ -39,7 +39,7 @@ bool equalPaths(Node * root)
         return true;  
     }
 
-    // recursively check children subtrees must ALSO have equal paths
+    // recursively check children subtrees must also have equal paths
     if (!equalPaths(root->left)){  return false;}
     if (!equalPaths(root->right)){ return false;}
 
